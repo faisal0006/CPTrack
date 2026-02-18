@@ -1,243 +1,109 @@
-CPTrack – Goal-Based Competitive Programming Progress Tracker
-1. Project Overview
+# 🚀 CPTrack – Goal-Based Competitive Programming Progress Tracker
 
-CPTrack is a Full Stack Web Application designed to help competitive programmers track their progress in a structured, goal-oriented manner.
+---
 
-The platform allows users to:
+## Overview
 
-Set a target rating (e.g., 1600 on Codeforces)
+**CPTrack** is a full-stack web application that helps competitive programmers track their problem-solving journey in a structured and goal-oriented manner.
 
-Set a daily problem-solving goal
+Platforms like Codeforces provide raw statistics such as rating, submissions, and solved counts. However, they do not provide structured goal tracking, topic-wise weakness identification, or daily accountability systems.
 
-Log solved problems manually
+CPTrack focuses on building a backend-driven analytics system that allows users to define measurable goals and monitor consistency, performance trends, and improvement areas.
 
-Track topic-wise and difficulty-wise progress
+---
 
-Monitor solving streaks
+## Problem Statement
 
-Visualize consistency using a heatmap
+1. **Lack of structured goal tracking** – Users set target ratings (e.g., 1600) but cannot systematically measure progress toward them.
 
-The primary focus of this project is backend system design and software engineering principles.
+2. **Inconsistent practice habits** – Without streak tracking or daily goal monitoring, users lose consistency.
 
-2. Problem Statement
+3. **No topic-level performance insights** – Platforms show solved counts but do not clearly identify weak areas like DP, Graphs, or Number Theory.
 
-Competitive programmers often face the following issues:
+4. **Limited analytics beyond rating** – Users cannot view difficulty trends, weekly summaries, or structured performance reports.
 
-Inconsistent practice habits
+5. **No daily accountability system** – There is no mechanism to visualize or enforce daily problem-solving goals.
 
-No structured tracking system
+---
 
-Difficulty identifying weak topics
+## Scope
 
-No measurable goal progression
+---
 
-No daily accountability
+### In Scope
 
-Platforms like Codeforces provide statistics but do not provide:
+- User authentication (Register / Login)
+- JWT-based authentication system
+- Password hashing using bcrypt
+- Goal setting (target rating, daily goal)
+- Problem logging (name, difficulty, topic, platform, solved date)
+- Streak calculation system
+- Difficulty-wise analytics
+- Topic distribution analytics
+- Weekly summary generation
+- GitHub-style activity heatmap
+- RESTful API design
+- Layered backend architecture (Controller → Service → Repository → Database)
 
-Personalized goal tracking
+---
 
-Daily progress monitoring
+### Out of Scope (Milestone 1)
 
-Topic-based performance analytics
+- Automatic Codeforces API sync
+- Real-time contest simulation
+- AI-based recommendation engine
+- Rating prediction using ML
+- Friend comparison system
+- Payment integration
+- Admin dashboard
 
-Structured backend analytics services
+---
 
-CPTrack addresses these gaps by providing a structured tracking system backed by a well-designed backend architecture.
+## Tech Stack
 
-3. Project Scope (Milestone 1 Scope)
+### Backend (Primary Focus – 75%)
 
-This is a Full Stack Application.
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcrypt
 
-Backend Weightage: 75%
-Frontend Weightage: 25%
+### Frontend (25%)
 
-Backend will follow proper:
+- React
+- Tailwind CSS
+- Axios
+- Chart library for analytics visualization
 
-OOP principles
+---
 
-Layered architecture
+## Architecture Design
 
-RESTful API design
-
-Clean code structure
-
-Repository pattern
-
-Service layer abstraction
-
-JWT authentication
-
-Password hashing
-
-Frontend will focus on:
-
-Clean dashboard UI
-
-Analytics visualization
-
-Heatmap display
-
-API integration
-
-4. Core Features (MVP)
-1. Authentication
-
-User Registration
-
-User Login
-
-JWT-based authentication
-
-Password hashing using bcrypt
-
-2. Goal Management
-
-Set target rating
-
-Set daily problem goal
-
-Update current rating
-
-Store user progress metadata
-
-3. Problem Logging
-
-Users can log:
-
-Problem name
-
-Platform (e.g., Codeforces)
-
-Difficulty (e.g., 800–2000)
-
-Topic (e.g., DP, Graph, Math)
-
-Solved date
-
-4. Analytics Dashboard
-
-System calculates:
-
-Total problems solved
-
-Problems solved by difficulty
-
-Topic distribution
-
-Weekly summary
-
-Daily streak
-
-5. Heatmap (Consistency Tracker)
-
-GitHub-style activity grid
-
-Visual representation of daily problem-solving activity
-
-5. Functional Requirements
-
-Only authenticated users can access dashboard
-
-Users can log and delete problems
-
-System automatically calculates streak
-
-System dynamically computes analytics
-
-All APIs follow REST standards
-
-6. Non-Functional Requirements
-
-Secure authentication
-
-Encrypted passwords
-
-Clean code structure
-
-Scalable database schema
-
-Modular backend design
-
-Easy extensibility for future features
-
-7. Backend Architecture
-
-The backend follows a layered architecture:
+The backend follows a clean layered architecture:
 
 Routes → Controllers → Services → Repositories → Database
 
-Explanation:
+This ensures:
 
-Routes
+- Separation of concerns  
+- Encapsulation of business logic  
+- Abstraction of database operations  
+- Maintainability and scalability  
 
-Define API endpoints
+---
 
-Controllers
+## OOP & Design Principles Used
 
-Handle HTTP requests and responses
+- **Encapsulation** – Business logic is contained inside service classes.
+- **Abstraction** – Controllers do not directly interact with the database.
+- **Single Responsibility Principle** – Each layer has a clearly defined role.
+- **Repository Pattern** – Database logic is abstracted via repositories.
+- **Modular Design** – Authentication, logging, and analytics are separated into modules.
 
-Call service layer
+---
 
-Services
+## Conclusion
 
-Contain business logic
-
-Calculate streak, analytics, etc.
-
-Repositories
-
-Interact directly with database
-
-Abstract database queries
-
-Models
-
-Define schema structure
-
-8. OOP Principles Used
-Encapsulation
-
-Business logic is encapsulated inside service classes.
-
-Abstraction
-
-Controllers do not directly access the database.
-
-Single Responsibility Principle
-
-Each layer has one clear responsibility.
-
-Separation of Concerns
-
-Authentication, analytics, and logging are separated into modules.
-
-9. Future Scope (Not Part of Milestone 1)
-
-Automatic Codeforces API sync
-
-Rating prediction model
-
-AI-based topic weakness detection
-
-Smart daily recommendations
-
-Friend comparison system
-
-Public profile sharing
-
-10. Conclusion
-
-CPTrack is a backend-focused full-stack application that demonstrates:
-
-Proper system design
-
-Clean layered architecture
-
-OOP implementation
-
-RESTful API structure
-
-Real-world scalability
-
-This project is specifically designed to showcase backend engineering capability while solving a real competitive programming problem.
+CPTrack is a backend-focused full-stack application designed to demonstrate strong software engineering practices, proper system design, and scalable architecture while solving a real-world competitive programming tracking problem.
